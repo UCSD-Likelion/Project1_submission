@@ -18,7 +18,10 @@ function addTask(){
 }
 
 inputBox.addEventListener("keydown", (event) => {
-    if(event.key === "Enter"){
+    if(inputBox.value === ''){
+        alert("You must wirte something!");
+    }
+    else if(event.key === "Enter"){
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
